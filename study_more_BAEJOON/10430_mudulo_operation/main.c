@@ -7,9 +7,9 @@ int main()
     scanf("%d %d %d", &a, &b, &c);
     
     printf("%d\n", (a+b)%c);
-    printf("%d\n", ((a%c)+(b%c))%c);
+    printf("%d\n", ((a%c)+(b%c))%c); //위 9번줄의 출력값과 10번줄의 출력값은 같다.
     printf("%d\n", (a*b)%c);
-    printf("%d\n", ((a%c)*(b%c))%c);
+    printf("%d\n", ((a%c)*(b%c))%c); //11번줄의 출력값과 12번줄의 출력값은 같다.
     
     return 0;
 }
