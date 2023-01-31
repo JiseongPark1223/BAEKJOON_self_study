@@ -1,36 +1,29 @@
 #include <stdio.h>
 
-void reverse(char arr[])
+int reverse(int num) //백의 자리 수와 일의 자리 수를 바꾸는 함수 선언
 {
-    char temp;
-    temp = arr[0];
-    arr[0] = arr[2];
-    arr[2] = temp;
+    int temp;
+    temp = num - (num/100)*100 - num%10;
+    num = (num%10)*100 + temp + (num/100);
+    return num;
 }
 
 int main()
 {
-    char arr1[3], arr2[3];
+    int num1, num2;
     
-    scanf("%s %s", arr1, arr2);
+    scanf("%d %d", &num1, &num2);
     
-    reverse(arr1);
-    reverse(arr2);
+    num1 = reverse(num1); //함수로 자리 수를 바꿈.
+    num2 = reverse(num2);
     
-    if (arr1 > arr2)
+    if (num1 > num2) //바꾼 수 중 더 큰 수를 출력.
     {
-        for (int i = 0; i < 3; i++)
-        {
-            printf("%c", arr1[i]);
-        }
+        printf("%d", num1);
     }
     else
     {
-         for (int i = 0; i < 3; i++)
-        {
-            printf("%c", arr2[i]);
-        }
+        printf("%d", num2);
     }
-
     return 0;
 }
