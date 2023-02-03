@@ -25,7 +25,7 @@ int main()
             return 0;
         }
     }
-    result = s3 + s5; //3kg 설탕 봉지수와 5kg 설탕 봉지수를 합함.
+    result = s3 + s5; //3kg 설탕 봉지수와 5kg 설탕 봉지수를 더함.
     
     printf("%d", result);
     return 0;
