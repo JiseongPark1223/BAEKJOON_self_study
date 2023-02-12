@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, cnt, n1, n2, n3;
+    
+    scanf("%d", &n);
+    
+    if (n < 100) //한자릿수, 두자릿수는 모두 한수이다.
+    {
+        cnt = n;    
+    }
+    else
+    {
+        cnt = 99;
+    }
+    
+    for (int i = 100; i <= n; i++)
+    {
+        n1 = i/100;
+        n2 = (i - n1*100)/10;
+        n3 = i%10;
+        
+        if (n1 - n2 == n2 - n3) 각 자릿수를 구한 후 공차 조건을 만든다.
+        {
+            cnt++;
+        }
+    }
+    
+    printf("%d", cnt);
+    
+    return 0;
+}
