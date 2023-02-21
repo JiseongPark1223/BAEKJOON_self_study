@@ -4,7 +4,7 @@ int main()
 {
     int num[10002] = {0}, temp, sum;
     
-    for (int i = 1; i <= 10000; i++) //생성자 있는 숫자를 제거
+    for (int i = 1; i <= 10000; i++) //생성자 있는 숫자를 제거하기 위한 과정 실행
     {
         sum = i;
         temp = i;
@@ -30,3 +30,4 @@ int main()
     }
     return 0;
 }
+2
