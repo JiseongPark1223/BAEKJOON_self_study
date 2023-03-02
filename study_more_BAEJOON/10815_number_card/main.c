@@ -5,11 +5,11 @@ int compare(const void *arr1, const void *arr2) //qsort compare 함수, 오름�
 {   
     if (*(int *)arr1 > *(int *)arr2)
     {
-        return 1;
+        return 1; //문자열을 교체
     }
     else
     {
-        return -1;
+        return -1; //그 외에는 교체하지 않음.
     }
 }
 
