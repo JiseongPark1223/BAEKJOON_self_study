@@ -45,7 +45,7 @@ int main()
         scanf("%d", &num[i]);
     }
     
-    qsort(num, n, sizeof(int), compare);
+    qsort(num, n, sizeof(int), compare); //qsort함수로 수를 정렬
     
     scanf("%d", &m);
     
