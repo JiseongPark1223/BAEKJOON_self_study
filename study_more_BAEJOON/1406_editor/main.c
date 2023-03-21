@@ -97,7 +97,7 @@ int main()
                 newnode->next = NULL;
                 cur = newnode;
             }
-        }
+        }dd
     }
     
     head = head->next;
