@@ -79,7 +79,7 @@ int main()
             node *newnode = (node*)malloc(sizeof(node));
             newnode->data = word;
             
-            if (cur->next)
+            if (cur->next) //cur의 오른쪽에 값이 있으면 newnode에 그 값을 연결한다.
             {
                 cur->next->prev = newnode;
                 newnode->next = cur->next;
