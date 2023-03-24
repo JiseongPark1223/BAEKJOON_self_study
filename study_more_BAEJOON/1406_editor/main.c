@@ -24,7 +24,7 @@ int main()
     
     len = strlen(str);
     
-    for (int i = 0; i < len; i++) //입력받은 문자열을 이중연결리스트에 저장
+    for (int i = 0; i < len; i++) //입력받은 문자열을 이중연결리스트에 저장한다.
     {
         node *newnode = (node*)malloc(sizeof(node));
         newnode->data = str[i];
