@@ -4,7 +4,7 @@ int stack[80001], top = -1;
 
 void push(int x)
 {
-    stack[++top] = x;
+    stack[++top] = x; //스택에 추후에 비교할 값을 저장한다. 스택을 사용한 이유는 나중에 들어온 배열부터 비교하기 위해서 이다.
 }
 
 void pop()
