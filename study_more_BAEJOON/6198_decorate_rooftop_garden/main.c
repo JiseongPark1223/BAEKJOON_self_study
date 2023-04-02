@@ -27,7 +27,7 @@ int main()
         {
             pop(); //stack에 쌓인 배열보다 값이 크면 stack을 pop하면서 비교
         }
-        push(num);
+        push(num); //그 배열을 push하여 스택에 저장
         cnt += top;
     }
     printf("%lld", cnt);
