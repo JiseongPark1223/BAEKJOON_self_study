@@ -1,91 +1,75 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <string.h>
 
-int card[500001] = {0}, res[500001] = {0};
-
-int compare(const void *arr1, const void *arr2)
+int top = -1;
+char stack[102], str[102]; //fgets함수의 경우 개행문자를 문자열을 읽고 저장한 후 문자열 끝에 NULL을 저장한다.
+                           //따라서 문자열의 길이가 최대 100이므로 개행문자와 NULL문자를 고려해 배열의 원소를 102개로 설정해야한다.
+void push(char x)
 {
-    if (*(int *)arr1 > *(int *)arr2)
-    {
-        return 1;
-    }
-    else
-    {
-        return -1;
-    }
+    stack[++top] = x;
 }
 
-int lower_bound(int start, int end, int key, int *card)
+void pop()
 {
-    while (start < end)
-    {
-        int mid = start + (end - start)/2;
-        
-        if (card[mid] < key)
-        {
-            start = mid + 1;
-        }
-        else if (key < card[mid])
-        {
-            end = mid - 1;
-        }
-        else
-        {
-            end = mid - 1;
-        }
-    }
-    return start;
-}
-
-int upper_bound(int start, int end, int key, int *card)
-{
-    while (start < end)
-    {
-        int mid = start + (end - start)/2;
-        
-        if (card[mid] < key)
-        {
-            start = mid + 1;
-        }
-        else if (key < card[mid])
-        {
-            end = mid - 1;
-        }
-        else
-        {
-            start = mid + 1;
-        }
-    }
-    return end;
+    top--;
 }
 
 int main()
 {
-    int m, n, num, lb, ub;
+    int len;
     
-    scanf("%d", &m);
+    fgets(str, 102, stdin);
     
-    for (int i = 0; i < m; i++)
+    while (str[0] != '.')
     {
-        scanf("%d", &card[i]);
-    }
-    qsort(card, m, sizeof(int), compare);
-    
-    scanf("%d", &n);
-    
-    for (int i = 0; i < n; i++)
-    {
-        scanf("%d", &num);
+        top = -1;
+        len = strlen(str) - 2; //.과 개행문자를 고려
         
-        lb = lower_bound(0, m - 1, num, card);
-        ub = upper_bound(0, m - 1, num, card);
+        for (int i = 0; i < len; i++)
+        {
+            if (str[i] == '(' || str[i] == '[')
+            {
+                push(str[i]);
+            }
+            else if (str[i] == ')')
+            {
+                if (stack[top] == '(') //짝지어져야 하기때문에 stack[top]의 문자가 (일때만 pop한다.
+                {
+                    pop();
+                }
+                else
+                {
+                    push(str[i]);
+                    break;
+                }
+            }
+            else if (str[i] == ']')
+            {
+                if (stack[top] == '[') //짝지어져야 하기때문에 stack[top]의 문자가 [일때만 pop한다.
+                {
+                    pop();
+                }
+                else
+                {
+                    push(str[i]);
+                    break;
+                }
+            }
+            else
+            {
+                continue;
+            }
+        }
         
-        res[i] = ub - lb + 1;
-    }
-    
-    for (int i = 0; i < n; i++)
-    {
-        printf("%d ", res[i]);
+        if (top != -1) //짝지어져 괄호가 균형이 맞다면 모두 pop하면 top은 처음값인 -1이 된다.
+        {
+            printf("no\n");
+        }
+        else
+        {
+            printf("yes\n");
+        }
+        fgets(str, 102, stdin);
     }
     return 0;
 }
