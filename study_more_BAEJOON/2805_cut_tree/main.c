@@ -60,9 +60,9 @@ int main()
         scanf("%d", &arr[i]);
     }
     
-    qsort(arr, n, sizeof(int), compare);
+    qsort(arr, n, sizeof(int), compare); //배열을 내림차순으로 정렬
     
-    res = binary_search(1, arr[0], n, m, arr);
+    res = binary_search(1, arr[0], n, m, arr); //이분탐색으로 선형탐색보다 시간을 적게 쓴다.
     
     printf("%d", res);
     
