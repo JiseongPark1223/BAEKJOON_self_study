@@ -16,7 +16,7 @@ int main()
         cnt5 += (n/i);
     }
     
-    printf("%d", cnt2 > cnt5 ? cnt5 : cnt2);
+    printf("%d", cnt2 > cnt5 ? cnt5 : cnt2); //더 적은 것의 갯수를 구한다.
     
     return 0;
 }
