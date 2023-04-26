@@ -54,7 +54,7 @@ int main()
                 printf("%c", stack[top]);
                 pop();
             }
-            printf(" ");
+            printf(" "); //공백을 출력해 띄어쓰기를 시킨다.
         }
         else
         {
