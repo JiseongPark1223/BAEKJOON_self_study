@@ -19,7 +19,7 @@ int main()
     int len;
     char s[100003];
     
-    fgets(s, 100003, stdin);
+    fgets(s, 100003, stdin); //띄어쓰기가 있기 때문에 fgets로 문자열을 입력받는다.
     
     len = strlen(s);
     
