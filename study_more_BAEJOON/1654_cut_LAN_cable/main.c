@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h> //이분탐색 응용문제
 #include <stdlib.h>
 
 int compare(const void *arr1, const void *arr2) //내림차순으로 배열을 정렬
