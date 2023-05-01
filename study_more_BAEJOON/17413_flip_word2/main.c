@@ -58,7 +58,7 @@ int main()
         }
         else
         {
-            push(s[i]);
+            push(s[i]); //나머지 문자는 스택에 넣어준다.
         }
     }
     return 0;
