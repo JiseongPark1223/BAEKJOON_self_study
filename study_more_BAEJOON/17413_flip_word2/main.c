@@ -2,7 +2,7 @@
 #include <string.h>
 
 int top = -1;
-char stack[100003]; //fgets은 개행문자를 받고 경우에 따라 NULL을 추가하기 때문에 정해진 배열의 크기보다 2에서 3정도 크게 잡아야 한다.
+char stack[100003];//fgets은 개행문자를 받고 경우에 따라 NULL을 추가하기 때문에 정해진 배열의 크기보다 2에서 3정도 크게 잡아야
 
 void push(char x)
 {
