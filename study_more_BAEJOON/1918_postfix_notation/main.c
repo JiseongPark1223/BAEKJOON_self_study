@@ -40,7 +40,7 @@ int main()
         }
         else if (str[i] == '+' || str[i] == '-') //+와 -보다 출력우선 순위가 낮은 것은 '('인 경우이다.
         {
-            while (top >= 0 && stack[top] != '(') //top이 -1인 경우는 없다.
+            while (top >= 0 && stack[top] != '(') //top이 -1인 경우는 스택에 아무것도 있는 않은 경우이므로 없다.
             {
                     printf("%c", stack[top]);
                     pop();
