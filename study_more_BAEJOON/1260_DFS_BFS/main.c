@@ -1,5 +1,5 @@
 #include <stdio.h>
 
-int graph
+int graph[39]
 {
 }
