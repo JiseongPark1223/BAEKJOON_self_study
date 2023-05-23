@@ -30,7 +30,7 @@ int main()
             
             while (max != str[front])
             {
-                front = (front + 1)%cnt;
+                front = (front + 1)%cnt; //회전큐를 이용한다.
             }
             
             if (p == front)
