@@ -30,7 +30,7 @@ int main()
             
             while (max != str[front])
             {
-                front = (front + 1)%cnt; 
+                front = (front + 1)%cnt; //회전큐의 특성을 이용하여 정해진 배열만 돌도록 한다.
             }
             
             if (p == front)
