@@ -38,7 +38,7 @@ int main()
                 break;
             }
             
-            str[front] = 0;
+            str[front] = 0; //방문한 큐는 0으로 설정한다.
             front = (front + 1)%cnt;
             res++;
         }
