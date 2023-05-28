@@ -22,7 +22,7 @@ int main()
             max = 0;
             for (int i = 0; i < cnt; i++)
             {
-                if (max < str[i])
+                if (max < str[i]) //큐에서 최댓값을 찾아 순번을 정한다.
                 {
                     max = str[i];
                 }
