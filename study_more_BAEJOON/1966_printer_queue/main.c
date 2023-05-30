@@ -22,7 +22,7 @@ int main()
             max = 0;
             for (int i = 0; i < cnt; i++)
             {
-                if (max < str[i]) //큐에서 최댓값을 찾아 다음순번을 찾는다.
+                if (max < str[i]) //큐에서 최댓값을 찾아 다음순번을 찾는다
                 {
                     max = str[i];
                 }
