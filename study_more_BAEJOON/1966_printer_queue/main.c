@@ -33,7 +33,7 @@ int main()
                 front = (front + 1)%cnt; //회전큐의 특성을 이용하여 정해진 배열만 돌도록 한다.
             }
             
-            if (p == front)
+            if (p == front) //만약 찾던 수에 도달하면 중단하고 순번을 출력시킨다.
             {
                 break;
             }
