@@ -38,7 +38,7 @@ int main()
                 break;
             }
             
-            str[front] = 0; //방문한 큐는 0으로 설정한다.
+            str[front] = 0; //방문한 큐는 0으로 설정하여 최댓값을 구할 때 못 구하도록 한다.
             front = (front + 1)%cnt;
             res++;
         }
