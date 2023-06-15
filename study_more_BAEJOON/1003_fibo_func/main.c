@@ -13,7 +13,7 @@ int main()
         
         for (int i = 2; i <= n; i++)
         {
-            fibo[i][0] = fibo[i - 1][0] + fibo[i - 2][0]; //dp프로그래밍을 이용해 시간초과 없이 문제를 푼다.
+            fibo[i][0] = fibo[i - 1][0] + fibo[i - 2][0]; //dp프로그래밍을 이용해 시간초과 없이 문제를 풀어야 한다.
             fibo[i][1] = fibo[i - 1][1] + fibo[i - 2][1];
         }
         
