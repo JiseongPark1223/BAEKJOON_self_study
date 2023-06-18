@@ -2,7 +2,7 @@
 
 char board[102][102];
 int vis[102][102], dx[4] = {1, 0, -1, 0}, dy[4] = {0, 1, 0, -1};
-int n, front = 0, rear = 0, rgb = 0, rg = 0; //정상과 적록색약을 따로 구분
+int n, front = 0, rear = 0, rgb = 0, rg = 0; //정상과 적록색약을 따로 구분한다.
 
 typedef struct {
     int x, y;
