@@ -42,7 +42,7 @@ void bfs(int x, int y)
             push(nx, ny);
         }
         pop();
-        cnt++; //단지 내 집의 수를 계산
+        cnt++; //단지 내 집의 수를 계산한다.
     }
 }
 
