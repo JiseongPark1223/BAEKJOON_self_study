@@ -77,14 +77,14 @@ int main()
             if (board[i][j] == 1 && vis[i][j] == 0)
             {
                 bfs(i, j);
-                res[all] = cnt; //단지 내 집의 수를 배열에 저장
+                res[all] = cnt; //단지 내 집의 수를 배열에 저장한다.
                 cnt = 0;
                 all++; //총 단지 수를 계산
             }
         }
     }
     
-    qsort(res, all, sizeof(int), compare); //오름차순으로 배열을 정렬
+    qsort(res, all, sizeof(int), compare); //오름차순으로 배열을 정렬한다.
     
     printf("%d\n", all);
     
