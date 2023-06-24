@@ -74,7 +74,7 @@ int main()
         
         printf("%d\n", cnt);
         
-        cnt = 0, front = 0, rear = 0; //큐와 갯수를 초기화해야 한다.
+        cnt = 0, front = 0, rear = 0; //큐와 갯수를 초기화해야 out of bounds가 안나타난다.
         
         scanf("%d %d", &m, &n);
     }
