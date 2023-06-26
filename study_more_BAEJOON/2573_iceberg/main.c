@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int board[302][302], dec[302][302] = {0}, vis[302][302], dx[4] = {1, 0, -1, 0}, dy[4] = {0, 1, 0, -1};
+int board[302][302], dec[302][302] = {0}, vis[302][302], dx[4] = {1, 0, -1, 0}, dy[4] = {0, 1, 0, -1}; ㅇ
 int n, m, front = 0, rear = 0, all = 0, t = 0, flag = 0;
 
 typedef struct {
