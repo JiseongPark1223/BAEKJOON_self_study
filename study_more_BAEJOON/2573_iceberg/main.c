@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int board[302][302], dec[302][302] = {0}, vis[302][302], dx[4] = {1, 0, -1, 0}, dy[4] = {0, 1, 0, -1}; ㅇ
+int board[302][302], dec[302][302] = {0}, vis[302][302], dx[4] = {1, 0, -1, 0}, dy[4] = {0, 1, 0, -1};
 int n, m, front = 0, rear = 0, all = 0, t = 0, flag = 0;
 
 typedef struct {
@@ -37,7 +37,7 @@ void bfs(int x, int y)
             
             if (board[nx][ny] == 0 && board[q[front].x][q[front].y] > 0)
             {
-                dec[q[front].x][q[front].y]++;
+                dec[q[front].x][q[front].y]++; //빙산이 시간이 지날때마다 녹는 정도를 저장한다.
             }
             if (nx < 0 || ny < 0 || nx >= n || ny >= m) continue;
             if (vis[nx][ny] == 1 || board[nx][ny] == 0) continue;
@@ -74,7 +74,7 @@ int main()
             }
         }
         
-        if (all >= 2)
+        if (all >= 2) //빙산이 두조각 이상으로 나누어 지면 걸린 시간을 출력한다.
         {
             printf("%d", t);
             return 0;
@@ -84,7 +84,7 @@ int main()
         {
             for (int j = 0; j < m; j++)
             {
-                board[i][j] -= dec[i][j];
+                board[i][j] -= dec[i][j]; //빙산이 녹은 정도를 뺀다.
                 if (board[i][j] < 0)
                 {
                     board[i][j] = 0;
