@@ -37,7 +37,7 @@ void bfs(int x, int y)
             
             if (board[nx][ny] == 0 && board[q[front].x][q[front].y] > 0)
             {
-                dec[q[front].x][q[front].y]++; //빙산이 시간이 지날때마다 녹는 정도를 저장한다.
+                dec[q[front].x][q[front].y]++; //빙산이 시간이 지날때마다 녹는 정도를 deq에 저장한다.
             }
             if (nx < 0 || ny < 0 || nx >= n || ny >= m) continue;
             if (vis[nx][ny] == 1 || board[nx][ny] == 0) continue;
